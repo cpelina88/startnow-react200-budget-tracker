@@ -1,7 +1,7 @@
 import React from 'react';
 
 function calculateSum(lineItems) {
-  return lineItems.reduce((acc, lineItems) => acc + lineItem.amount, 0);
+  return lineItems.reduce((acc, lineItem) => acc + lineItem.amount, 0);
 }
 
 function formatCurrency(amount) {
@@ -20,9 +20,9 @@ class Summary extends React.Component {
   render() {
     const { incomeItems, expenseItems } = this.props;
 
-    const incomeTotal = calculateSum(incomeItems) / 100;
-    const expenseTotal = calculateSum(expenseItems) / 100;
-    const difference = Math.round(incomeTotal - expenseTotal) / 100;
+    const incomeTotal = calculateSum(incomeItems);
+    const expenseTotal = calculateSum(expenseItems);
+    const difference = Math.round(incomeTotal - expenseTotal);
 
     return (
       <div className='card border-indo mb-3'>

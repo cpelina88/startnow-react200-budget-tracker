@@ -9,11 +9,15 @@
     "less": "lessc src/css/style.less dist/css/style.css",
     "lint": "eslint .",
     "test": "npm run build && mocha test/.setup.js test/*.spec.js",
-    "postinstall": "npm run build"
+    "postinstall": "webpack"
   },
   "dependencies": {
     "axios": "^0.16.1",
+    "babel": "^6.3.26",
     "babel-loader": "^7.1.1",
+    "babel-preset-airbnb": "^1.0.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.4.3",
     "bluebird": "^3.5.0",
     "chai": "^3.5.0",
     "express": "^4.15.3",
